@@ -26,7 +26,7 @@ export default function Chapters() {
         </div>
       </div>
       <div className=" text-center w-full py-6 px-15 bg-[#59769d]">
-        <h2 className="text-3xl md:text-4xl  font-bold font-serif text-white text-center text-white ">
+        <h2 className="text-3xl md:text-4xl mb-6 font-bold font-serif text-white text-center text-white ">
           Sightshare Chapters
         </h2>
         <p className="text-lg leading-relaxed text-black font-bold mb-6">
@@ -67,10 +67,10 @@ export default function Chapters() {
           </div>
           <div className="w-full lg:w-1/2 mt-8">
             <a
-              href="/sightshare.pdf" // Path to the PDF in the public folder
-              target="_blank" // Optional: opens the PDF in a new tab
-              rel="noopener noreferrer" // Recommended for security when using target="_blank"
-              className="cursor-pointer" // Ensures the link icon shows up on hover
+              href="/sightshare.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
             >
               <img
                 src={sg}

@@ -6,7 +6,7 @@ import Voiceletters from "@/assets/voiceletters.JPG";
 import Fundraising from "@/assets/fundraising.PNG";
 import Volunteering from "@/assets/volunteering.PNG";
 import Interviewing from "@/assets/interviewing.JPG";
-import abus2 from "@/assets/abus2.JPG";
+import Funds from "@/assets/funds.png";
 export default function Impacts() {
   return (
     <div
@@ -155,9 +155,9 @@ export default function Impacts() {
           canes for hospitals in Ghana.{" "}
         </p>
         <img
-          src={abus2}
+          src={Funds}
           alt="Mission statement"
-          className="w-full aspect-[2/1] object-cover rounded-lg shadow-lg"
+          className="w-full aspect-[16/9] object-cover rounded-lg shadow-lg"
         />
       </div>
     </div>

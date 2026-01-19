@@ -8,56 +8,67 @@ import {
 
 import { Card, CardContent } from "@/components/ui/card";
 import p from "@/assets/p.jpg";
+import Elro from "@/assets/elro.JPG";
+import Emory from "@/assets/emory.JPG";
+import Cresenta from "@/assets/cresenta.JPG";
+import Riverside from "@/assets/riverside.JPG";
+import Leadership from "@/assets/leadership.jpg";
+import Stuy from "@/assets/StuyHS.JPG";
+import Aviation from "@/assets/aviation.JPG";
+import Herricks from "@/assets/herricks.JPG";
+import GreatNeck from "@/assets/greatneck.JPG";
+import James from "@/assets/james.JPG";
+
 const chapters = [
   {
     title: "Eleanor Roosevelt HS",
     location: "New York",
-    image: p,
+    image: Elro,
   },
   {
     title: "Emory Univeristy",
     location: "Georgia",
-    image: p,
+    image: Emory,
   },
   {
     title: "La Crescenta Valley School",
     location: "California",
-    image: p,
+    image: Cresenta,
   },
   {
     title: "Riverside HS",
     location: "South Carolina",
-    image: p,
+    image: Riverside,
   },
   {
     title: "International Leadership of Texas, Garland HS",
     location: "Texas",
-    image: p,
+    image: Leadership,
   },
   {
     title: "Stuyvesant HS",
     location: "New York",
-    image: p,
+    image: Stuy,
   },
   {
     title: "Aviation HS",
     location: "New York",
-    image: p,
+    image: Aviation,
   },
   {
     title: "Herricks HS",
     location: "New York",
-    image: p,
+    image: Herricks,
   },
   {
     title: "Greatneck South HS",
     location: "New York",
-    image: p,
+    image: GreatNeck,
   },
   {
     title: "James E. Taylor HS",
     location: "Texas",
-    image: p,
+    image: James,
   },
 ];
 
