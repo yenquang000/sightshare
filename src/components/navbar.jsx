@@ -11,6 +11,7 @@ const menuItems = [
   { name: "Chapters", href: "/chapters" },
   { name: "Gallery", href: "/gallery" },
   { name: "Partnerships", href: "/partnerships" },
+  { name: "Donate", href: "/donate" },
 ];
 
 export const NavBar = () => {

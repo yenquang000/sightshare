@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import Impacts from "./pages/impacts";
 import Chapters from "./pages/chapters";
 import Gallery from "./pages/gallery";
+import Donate from "./pages/donate";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/impacts" element={<Impacts />} />
           <Route path="/chapters" element={<Chapters />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       </div>
       <Footer />

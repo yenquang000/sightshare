@@ -1,11 +1,18 @@
 import Carousel, { CarouselItem } from "@/components/auto-carousel";
 import { Link } from "react-router-dom";
-import hp1 from "@/assets/hp1.JPG";
-import hp2 from "@/assets/hp2.JPG";
-import hp3 from "@/assets/hp3.JPG";
-import hp4 from "@/assets/hp4.JPG";
-import hp5 from "@/assets/hp5.JPG";
-import hp6 from "@/assets/hp6.JPG";
+import h1 from "@/assets/hp1.JPG";
+import h2 from "@/assets/h2.PNG";
+import h3 from "@/assets/h3.JPEG";
+import h4 from "@/assets/h4.JPEG";
+import h5 from "@/assets/h5.PNG";
+import h6 from "@/assets/h6.JPEG";
+import h7 from "@/assets/h7.JPEG";
+import h8 from "@/assets/h8.JPEG";
+import h9 from "@/assets/h9.JPEG";
+import h10 from "@/assets/h10.JPEG";
+import h11 from "@/assets/h11.JPEG";
+import h12 from "@/assets/h12.JPEG";
+
 import abus1 from "@/assets/abus1.JPG";
 import abus2 from "@/assets/abus2.JPG";
 import { ArrowRight } from "lucide-react";
@@ -17,15 +24,17 @@ const Homepage = () => {
       <section className="relative h-screen w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Carousel>
-            {[hp1, hp2, hp3, hp4, hp5, hp6].map((img, index) => (
-              <CarouselItem key={index}>
-                <img
-                  src={img}
-                  alt={`Homepage slide ${index + 1}`}
-                  className="h-screen w-screen object-cover"
-                />
-              </CarouselItem>
-            ))}
+            {[h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12].map(
+              (img, index) => (
+                <CarouselItem key={index}>
+                  <img
+                    src={img}
+                    alt={`Homepage slide ${index + 1}`}
+                    className="h-screen w-screen object-cover"
+                  />
+                </CarouselItem>
+              ),
+            )}
           </Carousel>
         </div>
 
@@ -42,7 +51,6 @@ const Homepage = () => {
 
       {/* about us */}
       <section id="about" className="w-full py-24 px-6 bg-[#59769d]">
-        {/* Flex container to align text + image */}
         <div className="mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2 text-left">
             <h2 className="mb-6 text-4xl text-white font-serif font-bold">
