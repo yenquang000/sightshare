@@ -58,14 +58,11 @@ const Homepage = () => {
             </h2>
 
             <p className="text-lg leading-relaxed text-black font-bold mb-6">
-              Founded in 2023, Sightshare is 501c3 nonprofit organization
-              dedicated to providing support for those facing challenges related
-              to visual impairment. <br /> <br /> Sightshare is a youth-led
-              nonprofit that works to improve eye health awareness,
-              accessibility, and education around the world. We run eye health
-              campaigns, organize eye camps, and create advocacy initiatives
-              that give young people the chance to make a real difference in
-              their communities.
+              Sightshare is a youth-led nonprofit that works to improve eye
+              health awareness, accessibility, and education around the world.
+              We run eye health campaigns, organize eye camps, and create
+              advocacy initiatives that give young people the chance to make a
+              real difference in their communities.
             </p>
             <Link to="/team">
               <button
