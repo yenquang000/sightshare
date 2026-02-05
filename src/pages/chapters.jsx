@@ -30,31 +30,21 @@ export default function Chapters() {
           Sightshare Chapters
         </h2>
         <p className="text-lg leading-relaxed text-black font-bold mb-6">
-          A Sightshare Chapter is a club at your school or in your community
-          that focuses on bringing our mission to life. <br />
-          - Chapters plan events, organize service projects, and lead advocacy
-          efforts. Some examples include: <br />
-          - Running fundraisers to support eye care programs
-          <br />
-          - Collaborating with other chapters through our Discord community and
-          sharing resources
-          <br />
-          - Hosting eye health awareness campaigns and workshops
-          <br />
-          - Participating in Sightshare-wide projects such as the Voice Letters
-          Project
-          <br />
-          Each chapter makes its own plans based on what works best for its
-          community while still staying true to our mission. <br />
-          You can get ideas from our Instagram or from our club resources
-          slideshow.
+          A Sightshare Chapter is a club you can start at your school that
+          brings our mission to life through service, advocacy, and awareness.
+          Chapters organize initiatives such as fundraisers for eye care
+          programs, eye health awareness campaigns, and participation in
+          Sightshare-wide projects like the Voice Letters Project, while
+          collaborating with other chapters through our Discord community. Each
+          chapter designs its activities to best serve its local community while
+          staying aligned with Sightshare’s mission.
         </p>
         <ChaptersCarousel />
         <h2 className="text-3xl md:text-4xl font-bold font-serif text-white text-center text-white mb-6 mt-6 ">
           Schools that participated in Sightshare
         </h2>
         <p className="text-lg leading-relaxed text-black font-bold mb-6">
-          A High schools and colleges that have participated in activities of
+          High schools and colleges that have participated in activities of
           Sightshare, such as the voice letters activities, glasses drive, and
           presentations about visual impairment
         </p>

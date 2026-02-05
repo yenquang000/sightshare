@@ -59,10 +59,10 @@ const Homepage = () => {
 
             <p className="text-lg leading-relaxed text-black font-bold mb-6">
               Sightshare is a youth-led nonprofit that works to improve eye
-              health awareness, accessibility, and education around the world.
-              We run eye health campaigns, organize eye camps, and create
-              advocacy initiatives that give young people the chance to make a
-              real difference in their communities.
+              health and visually impaired awareness, accessibility, and
+              education around the world. We bridge the gap between the sighted
+              youth community and the visually impaired, run eye health
+              campaigns, and fund eye camps.
             </p>
             <Link to="/team">
               <button

@@ -77,14 +77,13 @@ export default function Team() {
           </div>
           <div className="w-full text-center">
             <p className="text-lg leading-relaxed text-black font-bold mb-6">
-              Our team is comprised of high school and college students who are
-              passionate about making a difference. We provide a variety of
-              services aimed at amplifying the voices of the visually impaired
-              and promoting inclusive eye health for all. We believe that
-              everyone deserves access to quality eye care. Our team works
-              tirelessly to promote awareness of eye health and to provide
-              resources for those in need. Together, we can make a difference in
-              the lives of those facing eye health challenges.
+              Our team is composed of students who are passionate about making a
+              difference. We provide a variety of services aimed at amplifying
+              the voices of the visually impaired and promoting inclusive eye
+              health for all. We believe that everyone deserves access to
+              quality eye care, and our team works tirelessly to support those
+              facing eye health challenges. Together, we can make a difference
+              in the lives of those facing eye health challenges.
             </p>
           </div>
         </div>

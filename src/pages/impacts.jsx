@@ -102,12 +102,12 @@ export default function Impacts() {
               {
                 title: "Sending Voice Letters",
                 img: Voiceletters,
-                text: "We are organizing a campaign to deliver messages of encouragement to individuals undergoing eye surgeries. Many patients experience fear and anxiety about these procedures, and we hope to alleviate some of that burden by providing them with hope and support through our messages.",
+                text: "We organize campaigns to send messages of encouragement to individuals undergoing eye surgeries and warm messages during Holiday season for the visually impaired.",
               },
               {
                 title: "Fundraising",
                 img: Fundraising,
-                text: "We held numerous fundraisers with YVO and with our chapters, raising over $3000 in total.",
+                text: "We held numerous fundraisers with YVO and with our chapters that were used in eye camps and programs within Sightshare.",
               },
               {
                 title: "Volunteering",
@@ -117,7 +117,7 @@ export default function Impacts() {
               {
                 title: "Interviewing",
                 img: Interviewing,
-                text: "We have planned a series of interviews with visually impaired individuals to better understand their life and their experiences. We hope to conduct these interviews every two months, providing a consistent exploration of the challenges and successes within the visually impaired community. These amazing interviews are currently uploaded in our YouTube channel.",
+                text: "We conduct interviews with visually impaired individuals to better understand their lives and experiences, which are all shared via Youtube.",
               },
             ].map((item, index) => (
               <div
@@ -145,14 +145,10 @@ export default function Impacts() {
           Where does our fund go
         </h2>
         <p className="text-center text-lg leading-relaxed text-black font-bold mb-6">
-          We are diligently working to secure adequate funding for our project.
-          These funds will be used to buy white canes to deliver them to many
-          different locations located in America and Korea. Our primary goal is
-          to ensure the availability of these essential mobility tools for
-          individuals in need. Additionally, we have established a collaborative
-          partnership with Adopt A Hospital. With Adopt A Hospitals, we will use
-          our funds towards the acquisition of crucial health supplies and white
-          canes for hospitals in Ghana.{" "}
+          Our funds will go to support many of our initiatives like voice
+          letters and eye camps led by VisionCare in Morocco and other
+          countries. With Adopt A Hospitals, we will use our funds towards the
+          acquisition of crucial health supplies for hospitals in Ghana.
         </p>
         <img
           src={Funds}
