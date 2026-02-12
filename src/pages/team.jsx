@@ -4,8 +4,16 @@ import m2 from "@/assets/m2.JPG";
 import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
 import m5 from "@/assets/m5.JPEG";
-import m6 from "@/assets/m6.JPEG";
+import m6 from "@/assets/m6.jpg";
 import m7 from "@/assets/m7.JPG";
+import m8 from "@/assets/m8.jpg";
+import m9 from "@/assets/m9.jpeg";
+import m10 from "@/assets/m10.jpg";
+import m11 from "@/assets/m11.png";
+import m12 from "@/assets/m12.JPEG";
+import m13 from "@/assets/m13.jpg";
+import m14 from "@/assets/m14.jpg";
+import m15 from "@/assets/m15.jpg";
 import a1 from "@/assets/a1.JPEG";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
@@ -20,11 +28,11 @@ const members = [
     role: "Co-Founder & Chief Operating Officer",
     avatar: m2,
   },
-  {
+  /*{
     name: "Joshua Liz",
     role: "Sponsorship Director",
     avatar: m3,
-  },
+  }, */
   {
     name: "Leen Darwisha",
     role: "Network Director",
@@ -44,6 +52,46 @@ const members = [
     name: "Elizabeth Lin",
     role: "Production Director ",
     avatar: m7,
+  },
+  {
+    name: "Raisha Tayba",
+    role: "Production Director ",
+    avatar: m13,
+  },
+  {
+    name: "Serena Shi",
+    role: "Chapter Director ",
+    avatar: m8,
+  },
+  {
+    name: "Emily Harsono",
+    role: "Outreach Director ",
+    avatar: m9,
+  },
+  {
+    name: "Terry Tan",
+    role: "Grants Director ",
+    avatar: m10,
+  },
+  {
+    name: "Nathaniel Lee",
+    role: "Grants Director ",
+    avatar: m14,
+  },
+  {
+    name: "Sarone Terefe",
+    role: "Engagement Director ",
+    avatar: m11,
+  },
+  {
+    name: "Mohammad Rashed",
+    role: "Sponsorship Director ",
+    avatar: m12,
+  },
+  {
+    name: "Yen Quang",
+    role: "Website Director",
+    avatar: m15,
   },
 ];
 const alumna = [

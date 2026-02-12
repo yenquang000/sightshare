@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 
 import { Card, CardContent } from "@/components/ui/card";
-import p from "@/assets/p.jpg";
 import Elro from "@/assets/elro.JPG";
 import Emory from "@/assets/emory.JPG";
 import Cresenta from "@/assets/cresenta.JPG";
@@ -18,7 +17,7 @@ import Aviation from "@/assets/aviation.JPG";
 import Herricks from "@/assets/herricks.JPG";
 import GreatNeck from "@/assets/greatneck.JPG";
 import James from "@/assets/james.JPG";
-
+import francisLewis from "@/assets/flewis.JPG";
 const chapters = [
   {
     title: "Eleanor Roosevelt HS",
@@ -69,6 +68,11 @@ const chapters = [
     title: "James E. Taylor HS",
     location: "Texas",
     image: James,
+  },
+  {
+    title: "Francis Lewis HS",
+    location: "New York",
+    image: francisLewis,
   },
 ];
 

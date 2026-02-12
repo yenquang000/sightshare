@@ -14,7 +14,7 @@ function Donate() {
           </p>
 
           <a
-            href="gofundmeurl"
+            href="https://www.gofundme.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-white hover:underline text-[#59769d] font-serif font-bold py-2 px-6 rounded"
