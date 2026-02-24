@@ -69,7 +69,7 @@ const members = [
     avatar: m9,
   },
   {
-    name: "Terry Tian",
+    name: "Terryn Tian",
     role: "Grants Director ",
     avatar: m10,
   },
