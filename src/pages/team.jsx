@@ -110,6 +110,11 @@ const alumna = [
     role: "Marketing Director",
     avatar: a3,
   },
+  {
+    name: "Monica Chen",
+    role: "Technology Director",
+    avatar: a4,
+  },
 ];
 
 export default function Team() {
