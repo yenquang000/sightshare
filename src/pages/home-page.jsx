@@ -115,7 +115,7 @@ const Homepage = () => {
               </button>
             </Link>
           </div>
-          <div class="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2">
             <img
               src={abus2}
               alt="Mission statement"

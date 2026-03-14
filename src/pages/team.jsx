@@ -17,6 +17,7 @@ import m15 from "@/assets/m15.jpg";
 import a1 from "@/assets/a1.JPEG";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
+import a4 from "@/assets/a4.jpeg";
 const members = [
   {
     name: "Jiwon (Izzie) Lee",
