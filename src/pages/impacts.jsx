@@ -28,7 +28,7 @@ export default function Impacts() {
           <p>high schools/colleges have participated</p>
         </div>
         <div className="space-y-4">
-          <div className="text-5xl font-bold">$4,000+</div>
+          <div className="text-5xl font-bold">$5,000+</div>
           <p>Raised with Adopt A Hospital and YVO</p>
         </div>
         <div className="space-y-4">
