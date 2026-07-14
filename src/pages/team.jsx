@@ -14,31 +14,37 @@ import m12 from "@/assets/m12.JPEG";
 import m13 from "@/assets/m13.jpg";
 import m14 from "@/assets/m14.jpg";
 import m15 from "@/assets/m15.jpg";
+import m16 from "@/assets/m16.png";
 import a1 from "@/assets/a1.JPEG";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
 import a4 from "@/assets/a4.jpeg";
 const members = [
   {
-    name: "Jiwon (Izzie) Lee",
+    name: "Junseo Lee",
     role: "Co-Founder & Chief Executive Officer",
+    avatar: m2,
+  },
+  {
+    name: "Jiwon (Izzie) Lee",
+    role: "Co-Founder & Chief Financial Officer",
     avatar: m1,
   },
   {
-    name: "Junseo Lee",
-    role: "Co-Founder & Chief Operating Officer",
-    avatar: m2,
+    name: "Vancie Ruan",
+    role: "Chief Operating Officer",
+    avatar: m16,
   },
   /*{
     name: "Joshua Liz",
     role: "Sponsorship Director",
     avatar: m3,
   }, */
-  {
+  /*{
     name: "Leen Darwisha",
     role: "Network Director",
     avatar: m4,
-  },
+  },*/
   {
     name: "Elaine Kim",
     role: "Marketing Director",
@@ -115,6 +121,11 @@ const alumna = [
     name: "Monica Chen",
     role: "Technology Director",
     avatar: a4,
+  },
+  {
+    name: "Leen Darwisha",
+    role: "Network Director",
+    avatar: m4,
   },
 ];
 
