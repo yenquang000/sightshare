@@ -1,3 +1,5 @@
 # Sightshare
 
-This is the template for Sightshare, a student-led non-profit organization. Visit us at sightshare.org
+This is a full-stack personalized website for the nonprofit Sightshare, a student-led 501c3 organization supporting visually impaired community
+
+## Visit us at sightshare.org 
