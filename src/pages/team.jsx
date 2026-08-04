@@ -9,7 +9,7 @@ import m7 from "@/assets/m7.JPG";
 import m8 from "@/assets/m8.jpg";
 import m9 from "@/assets/m9.jpeg";
 import m10 from "@/assets/m10.jpg";
-import m11 from "@/assets/m11.png";
+import m11 from "@/assets/m11.jpeg";
 import m12 from "@/assets/m12.JPEG";
 import m13 from "@/assets/m13.jpg";
 import m14 from "@/assets/m14.jpg";
