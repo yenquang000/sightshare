@@ -5,7 +5,7 @@ import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
 import m5 from "@/assets/m5.JPEG";
 import m6 from "@/assets/m6.jpg";
-import m7 from "@/assets/m7.JPG";
+import m7 from "@/assets/m7.jpg";
 import m8 from "@/assets/m8.jpg";
 import m9 from "@/assets/m9.jpeg";
 import m10 from "@/assets/m10.jpg";
@@ -17,7 +17,7 @@ import m15 from "@/assets/m15.jpg";
 import m16 from "@/assets/m16.png";
 import a1 from "@/assets/a1.JPEG";
 import a2 from "@/assets/a2.JPG";
-import a3 from "@/assets/a3.JPG";
+import a3 from "@/assets/a3.jpg";
 import a4 from "@/assets/a4.jpeg";
 const members = [
   {
