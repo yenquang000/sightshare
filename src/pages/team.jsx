@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 import m1 from "@/assets/m1.JPG";
-import m2 from "@/assets/m2.JPG";
+import m2 from "@/assets/m2.jpg";
 import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
 import m5 from "@/assets/m5.JPEG";
 import m6 from "@/assets/m6.jpg";
 import m7 from "@/assets/m7.JPG";
 import m8 from "@/assets/m8.jpg";
-import m9 from "@/assets/m9.jpeg";
+import m9 from "@/assets/m9.JPG";
 import m10 from "@/assets/m10.jpg";
 import m11 from "@/assets/m11.jpeg";
-import m12 from "@/assets/m12.JPEG";
+import m12 from "@/assets/m12.jpg";
 import m13 from "@/assets/m13.jpg";
 import m14 from "@/assets/m14.jpg";
-import m15 from "@/assets/m15.jpg";
-import m16 from "@/assets/m16.png";
+import m15 from "@/assets/m15.PNG";
+import m16 from "@/assets/m16.jpg";
 import a1 from "@/assets/a1.JPEG";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
@@ -157,7 +157,7 @@ export default function Team() {
             {members.map((member, index) => (
               <div key={index} className="group overflow-hidden">
                 <img
-                  className="h-96 w-full rounded-md object-cover object-top "
+                  className="h-96 w-full rounded-md object-cover object-center "
                   src={member.avatar}
                   alt="team member"
                   width="826"
