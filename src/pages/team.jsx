@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import m1 from "@/assets/m1.JPG";
-import m2 from "@/assets/m2.jpg";
+import m2 from "@/assets/m2.JPG";
 import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
 import m5 from "@/assets/m5.JPEG";
