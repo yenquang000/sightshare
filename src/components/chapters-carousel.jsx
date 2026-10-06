@@ -78,33 +78,31 @@ const chapters = [
 
 export default function ChaptersCarousel() {
   return (
-    <div className="relative max-w-6xl mx-auto">
+    <div className="relative">
       <Carousel opts={{ align: "start", loop: true }}>
         <CarouselContent>
           {chapters.map((chapter, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/2 sm:basis-1/2 lg:basis-1/4"
+              className="basis-[85%] sm:basis-1/2 lg:basis-1/4"
             >
-              <Card className="h-full flex flex-col overflow-hidden rounded-xl">
-                <CardContent className="p-0 flex flex-col h-full">
+              <Card className="group h-full gap-0 overflow-hidden p-0">
+                <CardContent className="flex h-full flex-col p-0">
                   {/* Image (fixed ratio) */}
-                  <div className="relative w-full aspect-[16/9]">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-rule">
                     <img
                       src={chapter.image}
                       alt={chapter.title}
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
 
                   {/* Text container */}
-                  <div className="flex flex-col justify-center text-center p-3 flex-grow">
-                    <h3 className="text-base font-semibold line-clamp-2">
+                  <div className="flex flex-grow flex-col justify-between gap-3 p-5 text-left">
+                    <h3 className="line-clamp-2 font-serif text-lg leading-snug">
                       {chapter.title}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
-                      {chapter.location}
-                    </p>
+                    <p className="text-sm text-smoke">{chapter.location}</p>
                   </div>
                 </CardContent>
               </Card>
