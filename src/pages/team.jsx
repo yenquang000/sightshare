@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { PageHeader, Container, SectionHeader } from "@/components/ui/paper";
 import m1 from "@/assets/m1.JPG";
 import m2 from "@/assets/m2.JPG";
 import m3 from "@/assets/m3.JPG";
@@ -129,83 +129,62 @@ const alumna = [
   },
 ];
 
+function PersonCard({ person, imagePosition = "object-center" }) {
+  return (
+    <div className="group overflow-hidden rounded-[10px] border border-rule bg-ivory">
+      <div className="overflow-hidden border-b border-rule bg-halo">
+        <img
+          className={`aspect-[4/5] w-full object-cover ${imagePosition} transition-transform duration-500 group-hover:scale-[1.02]`}
+          src={person.avatar}
+          alt="team member"
+          width="826"
+          height="1239"
+          loading="lazy"
+        />
+      </div>
+      <div className="px-5 pt-4 pb-5">
+        <h3 className="title text-ink">{person.name}</h3>
+        <p className="mt-1 text-sm text-smoke">{person.role.trim()}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Team() {
   return (
-    <section id="team" className="bg-gray-50 py-3 px-6  dark:bg-transparent">
-      <div className="mx-auto max-w-5xl">
-        {/* current team members */}
-        <div className="mt-12 gap-4">
-          <div className="w-full text-center">
-            <h2 className="text-3xl font-bold sm:text-4xl font-serif  text-[#59769d]">
-              Our Team
-            </h2>
-          </div>
-          <div className="w-full text-center">
-            <p className="text-lg leading-relaxed text-black font-bold mb-6">
-              Our team is composed of students who are passionate about making a
-              difference. We provide a variety of services aimed at amplifying
-              the voices of the visually impaired and promoting inclusive eye
-              health for all. We believe that everyone deserves access to
-              quality eye care, and our team works tirelessly to support those
-              facing eye health challenges. Together, we can make a difference
-              in the lives of those facing eye health challenges.
-            </p>
-          </div>
-        </div>
-        <div className="mt-6 md:mt-12">
-          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {members.map((member, index) => (
-              <div key={index} className="group overflow-hidden">
-                <img
-                  className="h-96 w-full rounded-md object-cover object-center "
-                  src={member.avatar}
-                  alt="team member"
-                  width="826"
-                  height="1239"
-                />
-                <div className="px-2 pt-4">
-                  <h3 className="text-base text-2xl font-serif font-bold text-[#59769d]">
-                    {member.name}
-                  </h3>
+    <section id="team">
+      {/* current team members */}
+      <PageHeader title="Our" mark="Team" doodles={["glasses", "heart"]} />
 
-                  <p className="mt-1 text-sm text-gray-600">{member.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <Container>
+        <p className="prose-body mx-auto mt-2 text-center">
+          Our team is composed of students who are passionate about making a
+          difference. We provide a variety of services aimed at amplifying
+          the voices of the visually impaired and promoting inclusive eye
+          health for all. We believe that everyone deserves access to
+          quality eye care, and our team works tirelessly to support those
+          facing eye health challenges. Together, we can make a difference
+          in the lives of those facing eye health challenges.
+        </p>
+
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:mt-20">
+          {members.map((member, index) => (
+            <PersonCard key={index} person={member} />
+          ))}
         </div>
 
         {/* alumna */}
-        <div>
-          <div className="w-full text-center mt-12">
-            <h2 className="mt-12 text-3xl  sm:text-4xl font-serif font-bold text-[#59769d]">
-              Our Alumna
-            </h2>
-          </div>
+        <SectionHeader
+          className="mt-28 md:mt-36"
+          title="Our Alumna"
+          subtitle="Members who helped build Sightshare into what it is today."
+        />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {alumna.map((alumni, index) => (
+            <PersonCard key={index} person={alumni} imagePosition="object-top" />
+          ))}
         </div>
-        <div className="mt-6 md:mt-12">
-          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {alumna.map((alumni, index) => (
-              <div key={index} className="group overflow-hidden">
-                <img
-                  className="h-96 w-full rounded-md object-cover object-top "
-                  src={alumni.avatar}
-                  alt="team member"
-                  width="826"
-                  height="1239"
-                />
-                <div className="px-2 pt-4">
-                  <h3 className="text-base text-2xl font-serif font-bold text-[#59769d]">
-                    {alumni.name}
-                  </h3>
-
-                  <p className="mt-1 text-sm text-gray-600">{alumni.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </Container>
     </section>
   );
 }

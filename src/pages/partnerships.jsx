@@ -7,8 +7,13 @@ import p5 from "@/assets/p5.png";
 import p6 from "@/assets/p6.png";
 import p7 from "@/assets/p7.png";
 import gi from "@/assets/gi.PNG";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  PageHeader,
+  Container,
+  SectionHeader,
+  CtaLink,
+  InkPanel,
+} from "@/components/ui/paper";
 
 const partners = [
   { avatar: p1 },
@@ -21,107 +26,82 @@ const partners = [
 
 const sponsors = [{ avatar: p7 }];
 
+function LogoGrid({ items, alt }) {
+  return (
+    <div className={`grid overflow-hidden rounded-[10px] border border-rule ${items.length > 1 ? "grid-cols-2 lg:grid-cols-3" : ""}`}>
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="-mt-px -ml-px flex aspect-[3/2] items-center justify-center border-t border-l border-rule bg-ivory p-5 sm:p-10"
+        >
+          <img
+            src={item.avatar}
+            alt={alt}
+            className="max-h-24 w-auto object-contain mix-blend-multiply sm:max-h-32"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Partnerships() {
   return (
     <>
-      <section className="relative w-full overflow-hidden">
-        <div className="relative h-3/4 w-full">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${p})` }}
-          />
+      <PageHeader
+        title="Sponsors &"
+        mark="Partners"
+        subtitle="Our sponsors and partners play a crucial role in our journey"
+        image={p}
+        imageAlt="Sightshare with partners"
+        doodles={["globe", "heart"]}
+      />
 
-          <div className="absolute inset-0 bg-black/50 z-10" />
+      <Container>
+        {/* partners */}
+        <SectionHeader className="mt-28 md:mt-36" title="Our Partners" />
+        <div className="mt-12">
+          <LogoGrid items={partners} alt="Partner logo" />
+        </div>
 
-          <div className="relative z-20 flex h-full items-center justify-center">
-            <div className="max-w-2xl px-6 text-center text-white">
-              <h1 className="mb-4 text-7xl font-bold font-serif">
-                Sponsors & Partners
-              </h1>
-              <p className="text-lg">
-                Our sponsors and partners play a crucial role in our journey
+        {/* sponsors */}
+        <SectionHeader className="mt-24 md:mt-28" title="Our Sponsors" />
+        <div className="mx-auto mt-12 max-w-sm">
+          <LogoGrid items={sponsors} alt="Sponsor logo" />
+        </div>
+      </Container>
+
+      <InkPanel className="mt-28 md:mt-36">
+        <section id="about">
+          <Container className="grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
+            <div>
+              <h2 className="heading">Get involved</h2>
+
+              <p className="mt-6 leading-relaxed text-ivory/80">
+                If you have any interest in learning more about our team's
+                initiatives and objectives, we warmly welcome you to contact us at{" "}
+                <a
+                  href="mailto:sightshare.org@gmail.com"
+                  className="text-ivory underline decoration-brand-light underline-offset-4"
+                >
+                  sightshare.org@gmail.com
+                </a>{" "}
+                for any questions you may have.
               </p>
+              <div className="mt-8">
+                <CtaLink to="/chapters" tone="inverse">
+                  Start A Chapter
+                </CtaLink>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="w-full bg-gray-50 py-6 px-15">
-          <div className="mx-auto max-w-6xl">
-            {/* partners */}
-            <h2 className="text-center mb-12 text-4xl font-serif font-bold text-[#59769d]">
-              Our Partners
-            </h2>
-            <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-              {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center rounded-lg bg-white p-6 shadow-md"
-                >
-                  <img
-                    src={partner.avatar}
-                    alt="Partner logo"
-                    className="max-h-40 object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* sponsors */}
-            <h2 className="text-center mt-16 mb-12 text-4xl font-serif font-bold text-[#59769d]">
-              Our Sponsors
-            </h2>
-            <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-              {sponsors.map((sponsor, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center rounded-lg bg-white p-6 shadow-md"
-                >
-                  <img
-                    src={sponsor.avatar}
-                    alt="Sponsor logo"
-                    className="max-h-40 object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="w-full py-24 px-6 bg-[#59769d]">
-        <div className="mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-12">
-          <div className="w-full lg:w-1/2 text-left">
-            <h2 className="mb-6 text-4xl text-white font-serif font-bold">
-              Get involved
-            </h2>
-
-            <p className="text-lg leading-relaxed text-black font-bold mb-6">
-              If you have any interest in learning more about our team's
-              initiatives and objectives, we warmly welcome you to contact us at
-              sightshare.org@gmail.com for any questions you may have.
-            </p>
-            <Link to="/chapters">
-              <button
-                className="group bg-white hover:underline cursor-pointer text-[#59769d] font-serif font-bold py-2 px-4 rounded inline-flex items-center   /* 🔑 inline-flex forces single line */
-    gap-2 "
-              >
-                Start A Chapter
-                <ArrowRight
-                  size={18}
-                  className="shrink-0 transition-transform group-hover:translate-x-1"
-                />
-              </button>
-            </Link>
-          </div>
-          <div className="w-full lg:w-1/2">
             <img
               src={gi}
               alt="Get involved"
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="h-auto w-full rounded-[10px] border border-ivory/15 object-cover"
             />
-          </div>
-        </div>
-      </section>
+          </Container>
+        </section>
+      </InkPanel>
     </>
   );
 }

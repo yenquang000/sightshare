@@ -1,90 +1,105 @@
 import ChaptersCarousel from "../components/chapters-carousel";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import c from "@/assets/c.JPG";
 import sg from "@/assets/starterguide.jpg";
+import {
+  PageHeader,
+  Container,
+  SectionHeader,
+  CtaLink,
+  InkPanel,
+  Doodle,
+} from "@/components/ui/paper";
 
 import { MyMap } from "../components/chapters-map";
 
 export default function Chapters() {
   return (
     <section id="chapters">
-      <div className="relative h-3/4 w-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${c})` }}
-        />
+      <PageHeader
+        title="A Network of"
+        mark="Vision"
+        image={c}
+        imageAlt="Sightshare chapter members"
+        doodles={["glasses", "sparkle"]}
+      />
 
-        <div className="absolute inset-0 bg-black/50 z-10" />
+      {/* what is a chapter */}
+      <div className="lined-paper mt-24 border-y border-rule py-20 md:mt-32 md:py-28">
+        <Container>
+          <SectionHeader title="Sightshare Chapters" />
+          <p className="prose-body mx-auto mt-6 text-center">
+            A Sightshare Chapter is a club you can start at your school that
+            brings our mission to life through service, advocacy, and awareness.
+            Chapters organize initiatives such as fundraisers for eye care
+            programs, eye health awareness campaigns, and participation in
+            Sightshare-wide projects like the Voice Letters Project, while
+            collaborating with other chapters through our Discord community. Each
+            chapter designs its activities to best serve its local community while
+            staying aligned with Sightshare’s mission.
+          </p>
 
-        <div className="relative z-20 flex h-full items-center justify-center">
-          <div className="max-w-2xl px-6 text-center text-white">
-            <h1 className="mb-4 text-7xl font-bold font-serif">
-              A Network of Vision
-            </h1>
+          <div className="mt-14 lg:px-4">
+            <ChaptersCarousel />
           </div>
-        </div>
+        </Container>
       </div>
-      <div className=" text-center w-full py-6 px-15 bg-[#59769d]">
-        <h2 className="text-3xl md:text-4xl mb-6 font-bold font-serif text-white text-center text-white ">
-          Sightshare Chapters
-        </h2>
-        <p className="text-lg leading-relaxed text-black font-bold mb-6">
-          A Sightshare Chapter is a club you can start at your school that
-          brings our mission to life through service, advocacy, and awareness.
-          Chapters organize initiatives such as fundraisers for eye care
-          programs, eye health awareness campaigns, and participation in
-          Sightshare-wide projects like the Voice Letters Project, while
-          collaborating with other chapters through our Discord community. Each
-          chapter designs its activities to best serve its local community while
-          staying aligned with Sightshare’s mission.
-        </p>
-        <ChaptersCarousel />
-        <h2 className="text-3xl md:text-4xl font-bold font-serif text-white text-center text-white mb-6 mt-6 ">
-          Schools that participated in Sightshare
-        </h2>
-        <p className="text-lg leading-relaxed text-black font-bold mb-6">
-          High schools and colleges that have participated in activities of
-          Sightshare, such as the voice letters activities, glasses drive, and
-          presentations about visual impairment
-        </p>
-        <MyMap />
-        <div className="mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-12">
-          <div className="w-full lg:w-1/2 text-left">
-            <h2 className="mb-6 text-4xl text-white font-serif font-bold">
-              Ready to get involved?
-            </h2>
 
-            <p className="text-lg leading-relaxed text-black font-bold mb-6">
+      {/* map */}
+      <Container className="mt-28 md:mt-36">
+        <SectionHeader
+          title="Schools that participated in Sightshare"
+          subtitle="High schools and colleges that have participated in activities of Sightshare, such as the voice letters activities, glasses drive, and presentations about visual impairment"
+        />
+        <div className="mt-12">
+          <MyMap />
+        </div>
+      </Container>
+
+      {/* get involved */}
+      <InkPanel className="mt-28 md:mt-36">
+        <Container className="grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
+          <div className="relative">
+            <Doodle
+              name="sparkle"
+              className="absolute -top-12 left-56 hidden w-12 text-ivory md:block"
+            />
+            <p className="mb-4 text-sm text-brand-light">Start a chapter</p>
+            <h2 className="heading">Ready to get involved?</h2>
+
+            <p className="mt-6 leading-relaxed text-ivory/80">
               Sightshare is excited to have you join our journey. <br /> View
               our Starter Guide to get started ! <br /> After viewing, please
               fill out the INTEREST FORM
             </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScbm2RLzLFGo-SIg_hcDnl7LwI5Zznh4qlec7wONZmBZeyqfg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white hover:underline text-[#59769d] font-serif font-bold py-2 px-4 rounded inline-flex items-center"
-            >
-              Interest Form
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <CtaLink
+                href="https://docs.google.com/forms/d/e/1FAIpQLScbm2RLzLFGo-SIg_hcDnl7LwI5Zznh4qlec7wONZmBZeyqfg/viewform"
+                external
+                tone="inverse"
+              >
+                Interest Form
+              </CtaLink>
+              <CtaLink href="/sightshare.pdf" external tone="ghost-light">
+                Starter Guide
+              </CtaLink>
+            </div>
           </div>
-          <div className="w-full lg:w-1/2 mt-8">
+          <div>
             <a
               href="/sightshare.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer"
+              className="group block cursor-pointer overflow-hidden rounded-[10px] border border-ivory/15"
             >
               <img
                 src={sg}
                 alt="Click here to view the Starter Guide"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </a>
           </div>
-        </div>
-      </div>
+        </Container>
+      </InkPanel>
     </section>
   );
 }

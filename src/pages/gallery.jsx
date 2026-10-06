@@ -20,6 +20,7 @@ import g19 from "@/assets/g19.JPG";
 import g20 from "@/assets/g20.JPG";
 
 import React from "react";
+import { PageHeader, Container } from "@/components/ui/paper";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -48,11 +49,18 @@ const images = [
 
 function Gallery() {
   return (
-    <div id="gallery" style={{ maxWidth: "800px", margin: "0 auto" }}>
-      <h1 className="text-center text-4xl font-bold lg:text-5xl text-[#59769d] font-serif mb-4">
-        Sightshare Gallery
-      </h1>
-      <ImageGallery items={images} />
+    <div id="gallery">
+      <PageHeader
+        title="Sightshare"
+        mark="Gallery"
+        subtitle={`${images.length} moments from our chapters, eye camps and events.`}
+        doodles={["eye", "heart"]}
+      />
+      <Container>
+        <div className="mx-auto mt-10 max-w-[1000px] rounded-[10px] border border-rule bg-halo p-3 md:mt-14 md:p-6">
+          <ImageGallery items={images} showPlayButton slideInterval={4000} />
+        </div>
+      </Container>
     </div>
   );
 }

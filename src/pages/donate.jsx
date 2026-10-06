@@ -1,35 +1,33 @@
 import D from "@/assets/donate.JPG";
+import { PageHeader, Container, CtaLink, Doodle } from "@/components/ui/paper";
 
 function Donate() {
   return (
-    <section id="about" className="w-full py-24 px-6 bg-[#59769d]">
-      <div className="mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-12">
-        <div className="w-full lg:w-1/2 text-left">
-          <h2 className="mb-6 text-4xl text-white font-serif font-bold">
-            Support Our Journey
-          </h2>
-          <p className="text-lg leading-relaxed text-black font-bold mb-6">
-            At Sightshare, we work hard to deliver support to our patients. We
-            think you should join our journey too!
-          </p>
-
-          <a
-            href="https://www.gofundme.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-white hover:underline text-[#59769d] font-serif font-bold py-2 px-6 rounded"
-          >
-            GoFundMe
-          </a>
+    <section id="about">
+      <PageHeader title="Support Our" mark="Journey" doodles={["heart", "sparkle"]} />
+      <Container>
+        <div className="mt-10 grid overflow-hidden rounded-[10px] border border-rule md:mt-14 lg:grid-cols-2">
+          <div className="lined-paper flex flex-col justify-center p-8 md:p-14">
+            <Doodle name="envelope" className="mb-8 w-16 -rotate-6" />
+            <p className="heading-sm text-ink">
+              At Sightshare, we work hard to deliver support to our patients.
+              We think you should join our journey too!
+            </p>
+            <div className="mt-10">
+              <CtaLink href="https://www.gofundme.com/" external>
+                GoFundMe
+              </CtaLink>
+            </div>
+          </div>
+          <div className="border-t border-rule lg:border-t-0 lg:border-l">
+            <img
+              src={D}
+              alt="Donate"
+              className="h-full max-h-[640px] min-h-[320px] w-full object-cover"
+            />
+          </div>
         </div>
-        <div className="w-full lg:w-1/2 flex justify-center">
-          <img
-            src={D}
-            alt="Donate"
-            className="w-full max-w-md rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
+      </Container>
     </section>
   );
 }
