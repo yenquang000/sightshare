@@ -54,7 +54,7 @@ function Gallery() {
         title="Sightshare"
         mark="Gallery"
         subtitle={`${images.length} moments from our chapters, eye camps and events.`}
-        doodles={["eye", "heart"]}
+        eyebrow="Gallery"
       />
       <Container>
         <div className="mx-auto mt-10 max-w-[1000px] rounded-[10px] border border-rule bg-halo p-3 md:mt-14 md:p-6">
