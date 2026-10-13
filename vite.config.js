@@ -11,4 +11,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Bump the "r2" tag to force fresh asset URLs if a CDN ever caches a bad copy.
+        entryFileNames: "assets/[name]-[hash]-r2.js",
+        chunkFileNames: "assets/[name]-[hash]-r2.js",
+        assetFileNames: "assets/[name]-[hash]-r2[extname]",
+      },
+    },
+  },
 })
