@@ -154,7 +154,7 @@ export default function Team() {
   return (
     <section id="team">
       {/* current team members */}
-      <PageHeader title="Our" mark="Team" doodles={["glasses", "heart"]} />
+      <PageHeader title="Our" mark="Team" eyebrow="Who we are" />
 
       <Container>
         <p className="prose-body mx-auto mt-2 text-center">
