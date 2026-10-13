@@ -14,10 +14,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        // Bump the "r2" tag to force fresh asset URLs if a CDN ever caches a bad copy.
-        entryFileNames: "assets/[name]-[hash]-r2.js",
-        chunkFileNames: "assets/[name]-[hash]-r2.js",
-        assetFileNames: "assets/[name]-[hash]-r2[extname]",
+        // Bump the "r3" tag to force fresh asset URLs if a CDN ever caches a bad copy.
+        entryFileNames: "assets/[name]-[hash]-r3.js",
+        chunkFileNames: "assets/[name]-[hash]-r3.js",
+        assetFileNames: "assets/[name]-[hash]-r3[extname]",
       },
     },
   },
