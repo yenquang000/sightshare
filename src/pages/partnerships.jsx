@@ -54,7 +54,7 @@ export default function Partnerships() {
         subtitle="Our sponsors and partners play a crucial role in our journey"
         image={p}
         imageAlt="Sightshare with partners"
-        doodles={["globe", "heart"]}
+        eyebrow="Partnerships"
       />
 
       <Container>

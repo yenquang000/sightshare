@@ -4,7 +4,7 @@ import {
   Container,
   SectionHeader,
   InkPanel,
-  Doodle,
+  Eyebrow,
 } from "@/components/ui/paper";
 import { cn } from "@/lib/utils";
 import Ghana from "@/assets/ghana.JPG";
@@ -175,7 +175,7 @@ export default function Impacts() {
         title="Sightshare in"
         mark="numbers"
         subtitle="Sightshare is working hard to expand our projects"
-        doodles={["globe", "sparkle"]}
+        eyebrow="Our impact"
       />
 
       <Container>
@@ -220,7 +220,7 @@ export default function Impacts() {
       <Container className="mt-28 md:mt-36">
         <div className="relative grid overflow-hidden rounded-[10px] border border-rule lg:grid-cols-[1fr_1.3fr]">
           <div className="flex flex-col justify-center p-8 md:p-14">
-            <Doodle name="heart" className="mb-6 w-12" />
+            <Eyebrow className="mb-4">Transparency</Eyebrow>
             <h2 className="heading">Where does our fund go</h2>
             <p className="prose-body mt-6">
               Our funds will go to support many of our initiatives like voice

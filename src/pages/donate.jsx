@@ -1,14 +1,14 @@
 import D from "@/assets/donate.JPG";
-import { PageHeader, Container, CtaLink, Doodle } from "@/components/ui/paper";
+import { PageHeader, Container, CtaLink, Eyebrow } from "@/components/ui/paper";
 
 function Donate() {
   return (
     <section id="about">
-      <PageHeader title="Support Our" mark="Journey" doodles={["heart", "sparkle"]} />
+      <PageHeader title="Support Our" mark="Journey" eyebrow="Donate" />
       <Container>
         <div className="mt-10 grid overflow-hidden rounded-[10px] border border-rule md:mt-14 lg:grid-cols-2">
-          <div className="lined-paper flex flex-col justify-center p-8 md:p-14">
-            <Doodle name="envelope" className="mb-8 w-16 -rotate-6" />
+          <div className="bg-halo flex flex-col justify-center p-8 md:p-14">
+            <Eyebrow className="mb-4">Every gift counts</Eyebrow>
             <p className="heading-sm text-ink">
               At Sightshare, we work hard to deliver support to our patients.
               We think you should join our journey too!

@@ -19,7 +19,7 @@ import abus2 from "@/assets/abus2.JPG";
 import ghana from "@/assets/ghana.JPG";
 import voiceletters from "@/assets/voiceletters.JPG";
 import interviewing from "@/assets/interviewing.JPG";
-import { CtaLink, Container, InkPanel } from "@/components/ui/paper";
+import { CtaLink, Container, Eyebrow, InkPanel } from "@/components/ui/paper";
 import p1 from "@/assets/p1.png";
 import p2 from "@/assets/p2.png";
 import p3 from "@/assets/p3.png";
@@ -56,14 +56,6 @@ const pillars = [
     text: "Our chapters run eye health campaigns, voice-letter drives and classes that connect students with the visually impaired community.",
   },
 ];
-
-const Eyebrow = ({ children, className = "" }) => (
-  <p
-    className={`text-xs font-medium tracking-[0.14em] text-brand uppercase ${className}`}
-  >
-    {children}
-  </p>
-);
 
 const Homepage = () => {
   return (

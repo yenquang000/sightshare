@@ -7,7 +7,6 @@ import {
   SectionHeader,
   CtaLink,
   InkPanel,
-  Doodle,
 } from "@/components/ui/paper";
 
 import { MyMap } from "../components/chapters-map";
@@ -20,11 +19,11 @@ export default function Chapters() {
         mark="Vision"
         image={c}
         imageAlt="Sightshare chapter members"
-        doodles={["glasses", "sparkle"]}
+        eyebrow="Chapters"
       />
 
       {/* what is a chapter */}
-      <div className="lined-paper mt-24 border-y border-rule py-20 md:mt-32 md:py-28">
+      <div className="bg-halo mt-24 border-y border-rule py-20 md:mt-32 md:py-28">
         <Container>
           <SectionHeader title="Sightshare Chapters" />
           <p className="prose-body mx-auto mt-6 text-center">
@@ -59,10 +58,6 @@ export default function Chapters() {
       <InkPanel className="mt-28 md:mt-36">
         <Container className="grid items-center gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
           <div className="relative">
-            <Doodle
-              name="sparkle"
-              className="absolute -top-12 left-56 hidden w-12 text-ivory md:block"
-            />
             <p className="mb-4 text-sm text-brand-light">Start a chapter</p>
             <h2 className="heading">Ready to get involved?</h2>
 
