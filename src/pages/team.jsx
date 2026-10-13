@@ -158,13 +158,8 @@ export default function Team() {
 
       <Container>
         <p className="prose-body mx-auto mt-2 text-center">
-          Our team is composed of students who are passionate about making a
-          difference. We provide a variety of services aimed at amplifying
-          the voices of the visually impaired and promoting inclusive eye
-          health for all. We believe that everyone deserves access to
-          quality eye care, and our team works tirelessly to support those
-          facing eye health challenges. Together, we can make a difference
-          in the lives of those facing eye health challenges.
+          We are students working to amplify the voices of the visually
+          impaired and make quality eye care accessible to everyone.
         </p>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:mt-20">
