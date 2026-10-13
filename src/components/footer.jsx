@@ -7,7 +7,6 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Doodle } from "@/components/ui/paper";
 
 const socials = [
   {
@@ -51,11 +50,6 @@ export default function Footer() {
   return (
     <footer className="relative mt-28 overflow-hidden border-t border-rule bg-halo md:mt-36">
       <div className="relative mx-auto max-w-[1200px] px-5 pt-14 pb-8 sm:px-8 md:pt-20">
-        <Doodle
-          name="glasses"
-          className="absolute right-8 bottom-24 hidden w-28 -rotate-6 lg:block"
-        />
-
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
           <div>
             <div className="flex items-center gap-2.5">
