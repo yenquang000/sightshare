@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import m1 from "@/assets/m1.JPG";
+import m1 from "@/assets/m1.png";
 import m2 from "@/assets/m2.JPG";
 import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
@@ -15,7 +15,7 @@ import m13 from "@/assets/m13.jpg";
 import m14 from "@/assets/m14.jpg";
 import m15 from "@/assets/m15.PNG";
 import m16 from "@/assets/m16.jpg";
-import a1 from "@/assets/a1.JPEG";
+import a1 from "@/assets/a1.JPG";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
 import a4 from "@/assets/a4.jpeg";
