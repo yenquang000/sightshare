@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <ScrollToHash />
       <NavBar />
-      <div className="pt-24">
+      <main className="min-h-screen pt-[68px]">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/team" element={<Team />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/donate" element={<Donate />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </BrowserRouter>
   );

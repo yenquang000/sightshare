@@ -92,7 +92,7 @@ const locations = [
 
 export function SchoolsMarkers() {
   return (
-    <div className="h-[350px] w-full">
+    <div className="h-full w-full">
       <Map center={[-98.5795, 39.8283]} zoom={3}>
         {locations.map((location) => (
           <MapMarker
@@ -101,19 +101,19 @@ export function SchoolsMarkers() {
             latitude={location.lat}
           >
             <MarkerContent>
-              <div className="w-5 h-5 rounded-full bg-red-500 border-2 border-white shadow-lg" />
+              <div className="size-3.5 rounded-full border-2 border-ivory bg-brand outline outline-1 outline-ink/40 transition-transform hover:scale-125" />
             </MarkerContent>
 
-            <MarkerTooltip>
-              <span className="text-white font-medium text-sm">
+            <MarkerTooltip className="rounded-[8px] bg-ink px-2.5 py-1.5">
+              <span className="text-sm font-medium text-white">
                 {location.name}
               </span>
             </MarkerTooltip>
 
-            <MarkerPopup>
+            <MarkerPopup className="rounded-[10px] border border-rule bg-ivory px-4 py-3 shadow-none">
               <div className="space-y-1">
-                <p className="font-semibold text-white">{location.name}</p>
-                <p className="text-gray-200">
+                <p className="font-serif text-base text-ink">{location.name}</p>
+                <p className="text-xs text-smoke">
                   {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
                 </p>
               </div>

@@ -1,10 +1,177 @@
 @import "tailwindcss";
 
+/*
+ * Sightshare design system
+ * Based on the Opennote "leather journal on sunlit paper" style:
+ * warm ivory paper, serif headlines, sans body, 1px hairlines, 10px corners,
+ * no shadows. The single chromatic ink is the Sightshare logo blue.
+ */
+@theme {
+  --font-serif: "Iowan Old Style", "Source Serif 4", "Tiempos Text", "PT Serif", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Paper + ink */
+  --color-ivory: #fffdf8;      /* page canvas, card surface */
+  --color-halo: #f8f5ee;       /* recessed panels */
+  --color-ink: #0a0a0a;        /* primary text */
+  --color-slate: #474747;      /* secondary body copy */
+  --color-smoke: #737373;      /* captions, helper text */
+  --color-rule: #e5e5e5;       /* hairlines, card outlines */
+  --color-ash: #d1d1d1;        /* button borders */
+
+  /* Blues — from the Sightshare logo */
+  --color-brand: #59769e;      /* logo blue: filled CTAs, accent text */
+  --color-brand-deep: #465f83; /* hover state */
+  --color-brand-light: #a0cce7;/* logo handshake blue: highlighter wash */
+  --color-panel: #3a5277;      /* deep shade of the logo blue: feature panel */
+
+  /* shadcn-style aliases used by ui/ components */
+  --color-background: #fffdf8;
+  --color-foreground: #0a0a0a;
+  --color-card: #fffdf8;
+  --color-card-foreground: #0a0a0a;
+  --color-popover: #fffdf8;
+  --color-popover-foreground: #0a0a0a;
+  --color-primary: #59769e;
+  --color-primary-foreground: #fffdf8;
+  --color-secondary: #f8f5ee;
+  --color-secondary-foreground: #0a0a0a;
+  --color-muted: #f8f5ee;
+  --color-muted-foreground: #737373;
+  --color-accent: #f8f5ee;
+  --color-accent-foreground: #0a0a0a;
+  --color-border: #e5e5e5;
+  --color-input: #d1d1d1;
+  --color-ring: #59769e;
+  --color-destructive: #5e0831;
+}
+
 @layer base {
+  html {
+    background: var(--color-ivory);
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory text-ink font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  ::selection {
+    background: var(--color-brand-light);
+    color: var(--color-ink);
+  }
+
   .maplibregl-popup-content {
     @apply bg-transparent! shadow-none! p-0! rounded-none!;
   }
   .maplibregl-popup-tip {
     @apply hidden!;
   }
+}
+
+@layer components {
+  /* Serif type scale — always weight 400, never bold */
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 5.2vw, 4rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+  }
+  .heading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.1rem, 3.6vw, 2.625rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .heading-sm {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    line-height: 1.12;
+  }
+  .title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+  .subhead {
+    @apply text-smoke;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .prose-body {
+    @apply text-slate;
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 62ch;
+  }
+
+  /* Highlighter wash in the logo's light blue */
+  .mark {
+    background-image: linear-gradient(
+      transparent 58%,
+      color-mix(in srgb, var(--color-brand-light) 70%, transparent) 58%,
+      color-mix(in srgb, var(--color-brand-light) 70%, transparent) 92%,
+      transparent 92%
+    );
+    padding: 0 0.08em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Faint ruled-notebook paper */
+  .lined-paper {
+    background-color: var(--color-ivory);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      color-mix(in srgb, var(--color-brand-light) 45%, transparent) 31px,
+      color-mix(in srgb, var(--color-brand-light) 45%, transparent) 32px
+    );
+  }
+
+  .kicker {
+    @apply inline-flex items-center gap-2 text-sm text-smoke;
+  }
+}
+
+/* react-image-gallery: paper-and-ink treatment */
+.image-gallery-icon {
+  color: var(--color-ivory) !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+.image-gallery-icon:hover,
+.image-gallery-icon:focus {
+  color: var(--color-brand-light) !important;
+}
+.image-gallery-slide .image-gallery-image {
+  border-radius: 10px;
+  max-height: calc(100vh - 280px) !important;
+}
+.image-gallery-thumbnails {
+  padding-top: 16px !important;
+}
+.image-gallery-thumbnail {
+  border-radius: 10px;
+  overflow: hidden;
+  border-width: 2px !important;
+  border-color: transparent !important;
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover {
+  border-color: var(--color-brand) !important;
+}
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  border-radius: 7px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.fullscreen .image-gallery-slide .image-gallery-image {
+  border-radius: 0;
+  max-height: 100vh !important;
 }
