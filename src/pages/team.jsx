@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import m1 from "@/assets/m1.png";
 import { PageHeader, Container, SectionHeader } from "@/components/ui/paper";
-import m1 from "@/assets/m1.JPG";
+import m1 from "@/assets/m1.png";
 import m2 from "@/assets/m2.JPG";
 import m3 from "@/assets/m3.JPG";
 import m4 from "@/assets/m4.JPG";
