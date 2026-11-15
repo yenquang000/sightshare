@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import m1 from "@/assets/m1.png";
 import { PageHeader, Container, SectionHeader } from "@/components/ui/paper";
 import m1 from "@/assets/m1.png";
 import m2 from "@/assets/m2.JPG";
@@ -17,25 +16,29 @@ import m13 from "@/assets/m13.jpg";
 import m14 from "@/assets/m14.jpg";
 import m15 from "@/assets/m15.PNG";
 import m16 from "@/assets/m16.jpg";
-import a1 from "@/assets/a1.JPG";
+import a1 from "@/assets/a1.jpg";
 import a2 from "@/assets/a2.JPG";
 import a3 from "@/assets/a3.JPG";
 import a4 from "@/assets/a4.jpeg";
+
 const members = [
   {
     name: "Junseo Lee",
     role: "Co-Founder & Chief Executive Officer",
     avatar: m2,
+    linkedin: "https://www.linkedin.com/in/junseo-lee66/",
   },
   {
     name: "Jiwon (Izzie) Lee",
     role: "Co-Founder & Chief Financial Officer",
     avatar: m1,
+    linkedin: "https://www.linkedin.com/in/izzie-lee/",
   },
   {
     name: "Vancie Ruan",
     role: "Chief Operating Officer",
     avatar: m16,
+    linkedin: "https://www.linkedin.com/in/vancie-ruan-68a720358/",
   },
   /*{
     name: "Joshua Liz",
@@ -91,16 +94,19 @@ const members = [
     name: "Sarone Terefe",
     role: "Engagement Director ",
     avatar: m11,
+    linkedin: "https://www.linkedin.com/in/sarone-terefe/",
   },
   {
     name: "Mohammad Rashed",
     role: "Sponsorship Director ",
     avatar: m12,
+    linkedin: "https://www.linkedin.com/in/mohamrashed/",
   },
   {
     name: "Yen Quang",
     role: "Website Director",
     avatar: m15,
+    linkedin: "https://www.linkedin.com/in/yen-quang/",
   },
 ];
 const alumna = [
@@ -108,6 +114,7 @@ const alumna = [
     name: "Brayden Choi",
     role: "Co-Founder & Chief Financial Officer",
     avatar: a1,
+    linkedin: "https://www.linkedin.com/in/brayden-choi317/",
   },
   {
     name: "Lin Kuang",
@@ -123,11 +130,13 @@ const alumna = [
     name: "Monica Chen",
     role: "Technology Director",
     avatar: a4,
+    linkedin: "https://www.linkedin.com/in/monica-chen-/",
   },
   {
     name: "Leen Darwisha",
     role: "Network Director",
     avatar: m4,
+    linkedin: "https://www.linkedin.com/in/leen-darwisha/",
   },
 ];
 
@@ -138,15 +147,44 @@ function PersonCard({ person, imagePosition = "object-center" }) {
         <img
           className={`aspect-[4/5] w-full object-cover ${imagePosition} transition-transform duration-500 group-hover:scale-[1.02]`}
           src={person.avatar}
-          alt="team member"
+          alt={`${person.name} profile`}
           width="826"
           height="1239"
           loading="lazy"
         />
       </div>
-      <div className="px-5 pt-4 pb-5">
-        <h3 className="title text-ink">{person.name}</h3>
-        <p className="mt-1 text-sm text-smoke">{person.role.trim()}</p>
+      <div className="flex items-start justify-between px-5 pt-4 pb-5">
+        <div>
+          <h3 className="title text-ink">{person.name}</h3>
+          <p className="mt-1 text-sm text-smoke">{person.role.trim()}</p>
+        </div>
+
+        {/* Render LinkedIn icon only if the URL exists */}
+        {person.linkedin && (
+          <a
+            href={person.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-smoke transition-colors hover:text-ink"
+            aria-label={`${person.name}'s LinkedIn`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        )}
       </div>
     </div>
   );
